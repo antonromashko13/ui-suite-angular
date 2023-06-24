@@ -1,0 +1,101 @@
+/*!
+ * Copyright (c) 2022 apollon GmbH+Co. KG All Rights Reserved.
+ */
+@import "~@apollon/ui-suite/lib/sass/global";
+@import "~@apollon/ui-suite/lib/sass/palette";
+@import "~@apollon/ui-suite/lib/sass/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  apln-split {
+    flex: 1 1 0;
+    min-height: 0;
+  }
+
+  .left {
+    height: auto !important;
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+
+    .status-bar .status-bar-central .right-container {
+      .add-instance-button {
+        .add-instance-icon {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .navigation-tree-wrapper {
+      padding: 8px;
+      overflow-y: auto;
+    }
+  }
+
+  apln-navigation-bar {
+    apln-refresh-button {
+      apln-icon {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  apln-breadcrumbs::ng-deep {
+    .apln-navigation-bar {
+      .navigation-bar-container {
+        width: 100%;
+
+        .buttons-container {
+          .button-wrapper {
+            &:first-child {
+              apln-button {
+                padding-left: 3px;
+
+              }
+            }
+            &:not(:first-child) {
+              .apln-button-wrapper {
+                apln-icon {
+                  font-size: 12px !important;
+                  margin-right: 4px;
+                }
+              }
+            }
+            .apln-button-wrapper {
+              apln-icon {
+                font-size: map-get($apln-icon-sizes, "medium");
+              }
+            }
+          }
+        }
+        .right-area-container {
+          display: flex;
+          align-items: center;
+
+          .icon-buttons-wrapper {
+            margin-right: 4px;
+
+            apln-icon {
+              font-size: map-get($apln-icon-sizes, "medium");
+              cursor: pointer;
+
+              &:hover, &.selected {
+                color: $apln-blue;
+              }
+              &:first-child {
+                margin-right: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
