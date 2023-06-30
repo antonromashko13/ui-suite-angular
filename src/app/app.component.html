@@ -1,8 +1,7 @@
 <apln-split direction="horizontal">
-  <apln-split-area class="left" #leftComponentContainer
-                   [size]="'30%'"
+  <apln-split-area class="left"
+                   [size]="350"
                    [visible]="true"
-                   [minSizePixel]="300"
                    style="position: relative">
     <apln-navigation-bar>
       <apln-refresh-button
@@ -13,11 +12,12 @@
     <apln-tool-bar [buttons]="[]">
     </apln-tool-bar>
     <div class="navigation-tree-wrapper">
+      <app-tree></app-tree>
     </div>
   </apln-split-area>
   <apln-split-area
     class="center"
-    [minSizePixel]="1000"
+    [size]="1000"
     style="position: relative">
     <apln-navigation-bar>
       <apln-navigation-bar>
@@ -28,6 +28,21 @@
       </apln-navigation-bar>
     </apln-navigation-bar>
     <apln-tool-bar [buttons]="[]" [actionButtons]="[]"></apln-tool-bar>
+    <app-table></app-table>
+  </apln-split-area>
+  <apln-split-area
+    class="right"
+    style="position: relative">
+    <apln-navigation-bar>
+      <apln-navigation-bar>
+        <apln-refresh-button
+          aplnCustomTooltip
+          [title]="'Right panel'"
+        ></apln-refresh-button>
+      </apln-navigation-bar>
+    </apln-navigation-bar>
+    <apln-tool-bar [buttons]="[]" [actionButtons]="[]"></apln-tool-bar>
+    <app-details></app-details>
   </apln-split-area>
 </apln-split>
 

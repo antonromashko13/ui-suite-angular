@@ -1,0 +1,19 @@
+<apln-table
+  [rows]="rows"
+  [columns]="columns"
+  [headerHeight]="50"
+  [rowHeight]="tableConfigFormlyModel.rowHeight"
+  [columnMode]="tableConfigFormlyModel.columnMode"
+  [scrollbarH]="true"
+  [rowIdentityProperty]="'id'"
+  [editable]="tableConfigFormlyModel.editable"
+  (rowsReorderedHandle)="rowsReordered($event)"
+  [dndDraggable]="true"
+  [dndReorderable]="true"
+  [draggable]="true"
+  [dndModeConfig]="dndModeConfig"
+  [nestingRowsEnabled]="true"
+  [selectAll]="true"
+  [disabled]="false"
+  [smartNesting]="true">
+</apln-table>

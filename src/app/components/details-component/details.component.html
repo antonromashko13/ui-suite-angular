@@ -1,0 +1,30 @@
+<apln-accordion [closeOtherPanels]="true">
+  <apln-accordion-panel [identifier]="1" [isOpen]="true">
+    <apln-accordion-heading [headingText]="'Panel 1 (Opened by default)'">
+    </apln-accordion-heading>
+    <div>
+      <p>Panel Body</p>
+    </div>
+  </apln-accordion-panel>
+  <apln-accordion-panel [identifier]="2">
+    <apln-accordion-heading headingText="Panel 2">
+    </apln-accordion-heading>
+    <div>
+      <p>Panel Body</p>
+    </div>
+  </apln-accordion-panel>
+  <apln-accordion-panel [identifier]="3">
+    <apln-accordion-heading headingText="Panel 3">
+    </apln-accordion-heading>
+    <div>
+      <p>Panel Body</p>
+    </div>
+  </apln-accordion-panel>
+  <apln-accordion-panel [identifier]="4">
+    <apln-accordion-heading [headingText]="longHeaderName">
+    </apln-accordion-heading>
+    <div>
+      <p>Panel Body</p>
+    </div>
+  </apln-accordion-panel>
+</apln-accordion>
